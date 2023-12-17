@@ -12,10 +12,7 @@ namespace StrykerNullBug
             {
                 // Create model using basic auto mapper profile mapping.
                 var effectiveDate = historyRecord.Increment?.EffectiveStartDate ?? historyRecord.Switch.EffectiveDate;
-                ////var model = this.mapper.Map<InvestmentChangeEvent, HistoricInstruction>(
-                ////    historyRecord,
-                ////    opt => opt.Items["EffectiveDate"] = effectiveDate.Date);
-                ////models.Add(model);
+                var date = effectiveDate.Date;
 
                 // Manually set more complex properties.
                 this.SetRedirectionPortfolios(effectiveDate);
